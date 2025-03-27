@@ -448,7 +448,7 @@ header {
           line-height: 24px;
           color: var(--white);
           transition: all 0.3s ease 0s;
-          &.active {
+          &.active, &:hover {
             border-radius: 4px;
             background-color: var(--secondary);
             color: var(--primary-400);
@@ -807,6 +807,7 @@ header {
         min-height: auto;
       }
     }
+
     scale: 0.91;
     &.slick-current.slick-active.slick-center {
       scale: 1;
