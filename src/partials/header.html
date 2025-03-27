@@ -1,20 +1,12 @@
 <header>
-  <div class="header-wrapper">
+  <div class="header-wrapper" id="header">
     <div class="header d-flex justify-content-between align-items-center p-3">
       <div class="left-header d-flex gap-3 align-items-center">
-        <!-- <a href="#" class="text-decoration-none text-white text-center" style="width: 50px;">
-                            <img src="images/ico-list.svg" alt="">
-                        </a> -->
-        <div class="hamburger-wrapper">
-          <input type="checkbox" id="menuToggle" class="menu-checkbox">
-          <label for="menuToggle" class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </label>
-        </div>
+        <a href="#" class="text-decoration-none text-white text-center" style="width: 50px;" id="menuToggle">
+          <img src="images/ico-list.svg" alt="">
+        </a>
         <img class="ps-4" src="images/logo.svg" alt="logo">
-        <ul class="menu list-unstyled mb-0 ps-5 d-none d-lg-flex">
+        <ul class="menu list-unstyled mb-0 ps-5 d-xl-flex d-none">
           <li><a href="#">Primary Virtual Tour</a></li>
           <li><a href="#">Secondary Virtual Tour</a></li>
           <li><a href="#">Book a Tour</a></li>
@@ -22,29 +14,36 @@
           <li><a href="#">Parents</a></li>
         </ul>
       </div>
-      <div class="search position-relative text-end">
-        <div class="search-box" id="searchBox">
-          <input type="text" />
+      <div class="d-flex align-items-center gap-1">
+        <div class="search position-relative text-end">
+          <div class="search-box" id="searchBox">
+            <input placeholder="Search here..." type="text" />
+          </div>
+          <a href="#" class="d-block text-decoration-none text-white text-center" style="width: 50px;"
+            onclick="toggleSearch()" title="Seach">
+            <img src="images/ico-search.svg" alt="search">
+          </a>
         </div>
-        <a href="#" class="d-block text-decoration-none text-white text-center" style="width: 50px;"
-          onclick="toggleSearch()">
-          <img src="images/ico-search.svg" alt="logo">
+        <a href="#" class="d-block d-lg-none text-decoration-none text-white text-center mx-2"
+          title="Admission enquiry">
+          <img src="./../images/enquiry.gif" alt="enquiry">
         </a>
       </div>
     </div>
     <div class="admission-enquiry">
-      <!-- <span class="cursor-pointer">Admission Enquiry</span> -->
+      <!-- <span class="cursor-pointer d-lg-none">Admission Enquiry</span> -->
     </div>
   </div>
 </header>
 <div class="mega-menu d-none p-5" id="megaMenu">
   <div class="menu-header border-bottom pb-4">
-    <div class="row">
+    <div class="row align-items-center">
       <div class="col-lg-3">
-        <h5 id="toggleButton" class="text__20 text__semibold text__white mb-0 cursor-pointer">
-          <img src="images/left-angle.svg" /> <span>Back
+        <h5 id="toggleButton" class="text__22 text__semibold text__white mb-0 cursor-pointer text-uppercase">
+          <!-- <img src="images/left-angle.svg" /> <span>Back
             to
-            home</span>
+            home</span> -->
+          Menu
         </h5>
       </div>
       <div class="col-lg-9">
@@ -63,6 +62,10 @@
     <div class="row">
       <div class="col-lg-3 mega-sidebar">
         <ul class="nav nav-tabs side-menu text-uppercase" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="abs00-tab" data-bs-toggle="tab" data-bs-target="#abs00" type="button"
+              role="tab" aria-controls="abs00" aria-selected="true">HOME</button>
+          </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link active" id="abs01-tab" data-bs-toggle="tab" data-bs-target="#abs01" type="button"
               role="tab" aria-controls="abs01" aria-selected="true">ABOUT</button>
@@ -87,29 +90,19 @@
             <button class="nav-link" id="abs05-tab" data-bs-toggle="tab" data-bs-target="#abs05" type="button"
               role="tab" aria-controls="abs05" aria-selected="false">NEWS</button>
           </li>
-          <!-- <li class="nav-item" role="presentation">
-            <button class="nav-link" id="abs06-tab" data-bs-toggle="tab" data-bs-target="#abs06" type="button"
-              role="tab" aria-controls="abs06" aria-selected="false">PARENTS</button>
-          </li> -->
         </ul>
-        <div class="skill-wrapper overlay purple pt-5">
-          <div class="skill d-flex align-items-end">
-            <div class="row w-100">
-              <div class="col-6 skill-content">
-                <h3 class="text__18 text__black text__white mb-3">Have Admission Enquiry?
-                </h3>
-                <button class="btn btn-white text-nowrap">Enquire now</button>
-              </div>
-              <img data-aos="fade-up" data-aos-duration="2000" src="images/skills/high-academic-performance.svg" alt="">
-            </div>
-          </div>
+        <div class="enquire-now d-flex align-items-center gap-3">
+          <img src="./../images/enquiry.svg" alt="">
+          <h1 class="text__18 text__semibold text__white mb-0">Have admission
+            enquiry?</h1>
         </div>
+
       </div>
       <div class="col-lg-9">
         <div class="tab-content menu-content ps-lg-5" id="myTabContent">
           <div class="tab-pane fade show active" id="abs01" role="tabpanel" aria-labelledby="abs01-tab">
-            <h5 class="text__24 text__semibold text__secondary mb-0">ABOUT</h5>
-            <hr />
+            <h5 class="text__24 text__semibold text__white mb-0">ABOUT</h5>
+            <hr class="my-4" />
             <ul class="mega-submenu list-unstyled m-0">
               <li>
                 <img src="images/arrow-right.svg" alt="">
@@ -170,8 +163,9 @@
             </ul>
           </div>
           <div class="tab-pane fade" id="abs02" role="tabpanel" aria-labelledby="abs02-tab">
-            <h5 class="text__24 text__semibold text__secondary mb-0">ADMISSIONS</h5>
-            <hr />
+
+            <h5 class="text__24 text__semibold text__white mb-0">ADMISSIONS</h5>
+            <hr class="my-4" />
             <ul class="mega-submenu list-unstyled m-0">
               <li>
                 <img src="images/arrow-right.svg" alt="">

@@ -150,9 +150,7 @@
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <!-- hamburger -->
 <script>
-  // function toggleMenu(x) {
-  //     x.classList.toggle("active");
-  // }
+  // search toggle
   function toggleSearch() {
     var searchBox = document.getElementById("searchBox");
     if (searchBox.classList.contains("active")) {
@@ -164,34 +162,45 @@
     }
   }
 
-</script>
-<!-- slick client logo  -->
-<script>
-  $(document).ready(function () {
-    $('.customer-logos').slick({
-      slidesToShow: 7,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      arrows: false,
-      dots: true,
-      pauseOnHover: false,
-      responsive: [{
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 4
-        }
-      }, {
-        breakpoint: 520,
-        settings: {
-          slidesToShow: 3
-        }
-      }]
-    });
+  // slick client logo
+  $('.customer-logos').slick({
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    dots: true,
+    pauseOnHover: false,
+    responsive: [{
+      breakpoint: 992,
+      settings: {
+        arrows: false,
+        centerMode: false,
+        slidesToShow: 3,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: false,
+        slidesToShow: 2,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: false,
+        slidesToShow: 1,
+        dots: false
+      }
+    }]
   });
-</script>
-<!-- slick for single slide  -->
-<script>
+
+  // slick for single slide
   $('.slick-highlight').slick({
     centerMode: true,
     centerPadding: '120px',
@@ -202,28 +211,18 @@
         breakpoint: 768,
         settings: {
           arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
+          centerMode: false,
+          slidesToShow: 1,
+          dots: false
         }
       }
     ]
   });
-</script>
 
-<!-- animation -->
-<script>AOS.init();</script>
+  // animation
+  AOS.init();
 
-<script>
+  // mega menu toggle
   const buttons = ['toggleButton', 'menuToggle', 'crossToggle'];
   const box = document.getElementById('megaMenu');
 
@@ -231,6 +230,19 @@
     document.getElementById(id).addEventListener('click', () => {
       box.classList.toggle('d-none');
     });
+  });
+
+  // header
+  const header = document.getElementById('header');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      header.style.top = '20px';
+      header.style.padding = '0 20px'
+    } else {
+      header.style.top = '40px';
+      header.style.padding = '0 40px'
+    }
   });
 
 </script>
