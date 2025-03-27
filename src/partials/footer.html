@@ -68,17 +68,17 @@
           <ul class="mb-0">
             <li><a href="http://" target="_blank" rel="noopener noreferrer">Admission Enquiry</a>
             </li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Admission</a></li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Admission</a></li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Admission</a></li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Admission</a></li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Admission</a></li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Admission</a></li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Admission</a></li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Admission</a></li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Admission</a></li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Admission</a></li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Admission</a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">Primary</a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">Secondary</a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">Fees</a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">Activities</a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">Teachers</a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">Parents</a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">Calendar</a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">Alumni</a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">Careers</a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">News</a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -153,6 +153,17 @@
   // function toggleMenu(x) {
   //     x.classList.toggle("active");
   // }
+  function toggleSearch() {
+    var searchBox = document.getElementById("searchBox");
+    if (searchBox.classList.contains("active")) {
+      searchBox.classList.remove("active");
+      searchBox.value = ""; // Clear the input when closing
+    } else {
+      searchBox.classList.add("active");
+      searchBox.focus(); // Focus on the input when opening
+    }
+  }
+
 </script>
 <!-- slick client logo  -->
 <script>

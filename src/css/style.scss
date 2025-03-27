@@ -238,33 +238,6 @@ hr {
 }
 
 /* buttons */
-.btn {
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 2%;
-  text-align: center;
-  color: var(--white);
-  padding: 8px;
-  border-radius: 4px;
-  line-height: 22px;
-  &.btn-primary {
-    background-color: var(--primary);
-    border-color: var(--primary);
-  }
-  &.btn-secondary {
-    background-color: var(--secondary);
-    border-color: var(--secondary);
-  }
-  &.btn-white {
-    background-color: var(--white);
-    border-color: var(--white);
-    color: var(--primary-500);
-  }
-  &.btn-small {
-    font-size: 12px;
-    line-height: 100%;
-  }
-}
 
 .btn {
   font-weight: 500;
@@ -298,7 +271,6 @@ hr {
   }
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(179, 166, 255, 0.5);
   }
   &.btn-primary {
     background-color: var(--primary);
@@ -348,6 +320,48 @@ hr {
         margin: 6px 0;
       }
     }
+  }
+}
+
+.search {
+  position: relative;
+  min-height: 50px;
+  min-width: 100px;
+  .search-box {
+    width: 0;
+    padding: 0;
+    transition: width 0.3s ease, padding 0.3s ease;
+    outline: none;
+    border: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(90.13deg, #0d2d6e 0%, #041840 99.38%);
+    border-radius: 30px;
+    input {
+      border-radius: 28px;
+      display: none;
+      background: transparent;
+      color: var(--white);
+      width: 0;
+    }
+    &.active {
+      width: 250px;
+      transition: width 0.3s ease, padding 0.3s ease;
+
+      input {
+        border: 1px solid #d9d9d933;
+        padding: 12px 25px;
+        padding-right: 50px;
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  a {
+    position: absolute;
+    right: 0;
+    top: 8px;
   }
 }
 
@@ -768,6 +782,7 @@ header {
   .slick-slide {
     img {
       width: 100%;
+      min-height: 450px;
     }
     scale: 0.91;
     &.slick-current.slick-active.slick-center {
@@ -799,6 +814,12 @@ header {
         }
       }
     }
+  }
+  .slide-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }
 
