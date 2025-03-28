@@ -360,30 +360,43 @@ header {
     position: absolute;
     right: 0;
     top: 0;
-    background: linear-gradient(90.13deg, #0d2d6e 0%, #041840 99.38%);
     border-radius: 30px;
-    @media (max-width: 767px) {
-      width: calc(100dvw - 35px) !important;
+
+    .search-icon {
+      display: none;
       position: absolute;
-      top: 135%;
+      right: 30px;
+      top: 8px;
+      cursor: pointer;
+    }
+    @media (max-width: 767px) {
+      width: 100vw !important;
+      position: fixed;
+      top: 84px;
+      padding: 0 15px;
     }
     input {
+      background: linear-gradient(90.13deg, #0d2d6e 0%, #041840 99.38%);
       border-radius: 28px;
       display: none;
-      background: transparent;
       color: var(--white);
       width: 0;
     }
     &.active {
       width: 250px;
       transition: width 0.3s ease, padding 0.3s ease;
-
       input {
-        border: 1px solid #d9d9d933;
+        border: 1px solid #2a53a5;
         padding: 12px 25px;
         padding-right: 50px;
         display: block;
         width: 100%;
+        outline: 0;
+      }
+      @media (max-width: 767px) {
+        .search-icon {
+          display: block;
+        }
       }
     }
   }
@@ -448,7 +461,8 @@ header {
           line-height: 24px;
           color: var(--white);
           transition: all 0.3s ease 0s;
-          &.active, &:hover {
+          &.active,
+          &:hover {
             border-radius: 4px;
             background-color: var(--secondary);
             color: var(--primary-400);
