@@ -296,6 +296,23 @@ hr {
 
 /* home page */
 
+.edu-board {
+  animation: colorChange 3s infinite alternate;
+  @keyframes colorChange {
+    0% {
+      color: var(--secondary);
+    }
+
+    50% {
+      color: var(--white);
+    }
+
+    100% {
+      color: var(--secondary);
+    }
+  }
+}
+
 header {
   .header-wrapper {
     padding: 0 50px;
