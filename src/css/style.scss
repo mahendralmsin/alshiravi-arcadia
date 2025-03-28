@@ -166,14 +166,14 @@ html {
 
 .ps-40 {
   padding-left: 40px;
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     padding-left: 0;
   }
 }
 
 .p-50 {
   padding: 50px;
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     padding: 15px;
   }
 }
@@ -181,7 +181,7 @@ html {
 .px-50 {
   padding-left: 50px;
   padding-right: 50px;
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -189,7 +189,7 @@ html {
 
 .ps-50 {
   padding-left: 50px;
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     padding-left: 0;
   }
 }
@@ -207,14 +207,14 @@ html {
 
 .border-left {
   border-left: 1px solid #d9d9d933 !important;
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     border-left: 0 !important;
   }
 }
 
 .border-right {
   border-right: 1px solid #d9d9d933 !important;
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     border-right: 0 !important;
   }
 }
@@ -336,6 +336,9 @@ header {
       box-shadow: 0px 4px 4px 0px #00000040;
       @media (max-width: 767px) {
         border-radius: 0 !important;
+        .logo {
+          max-width: 160px;
+        }
       }
     }
     .admission-enquiry {
@@ -593,6 +596,9 @@ header {
     @media (max-width: 767px) {
       height: 45dvh;
     }
+    @media (orientation: landscape) {
+      height: 100%;
+    }
   }
   &:after {
     content: "";
@@ -624,6 +630,16 @@ header {
       height: 45vh;
       h1 {
         font-size: 40px;
+      }
+      h5 {
+        font-size: 20px !important;
+      }
+    }
+    @media (orientation: landscape) {
+      height: 100vh;
+      h1 {
+        font-size: 40px;
+        margin-top: 60px;
       }
       h5 {
         font-size: 20px !important;
@@ -945,6 +961,17 @@ header {
     margin-top: 120px;
     @media (max-width: 767px) {
       margin-top: 15px;
+    }
+  }
+  .admission-footer {
+    @media (max-width: 1200px) {
+      .border-right {
+        border: 0 !important;
+      }
+      .ps-40 {
+        padding-left: 0 !important;
+        padding-top: 15px;
+      }
     }
   }
 }
