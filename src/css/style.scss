@@ -351,6 +351,9 @@ header {
   position: relative;
   min-height: 50px;
   min-width: 100px;
+  @media (max-width: 767px) {
+    min-width: auto;
+  }
   .search-box {
     width: 0;
     padding: 0;
@@ -567,10 +570,11 @@ header {
   video {
     display: block;
     height: 95dvh;
+    height: 95vh;
     object-fit: cover;
     width: 100%;
     @media (max-width: 767px) {
-      height: 35dvh;
+      height: 45dvh;
     }
   }
   &:after {
@@ -590,6 +594,7 @@ header {
   }
   .banner-content {
     height: 95dvh;
+    height: 95vh;
     display: flex;
     align-items: center;
     position: absolute;
@@ -598,7 +603,8 @@ header {
     left: 0;
     z-index: 8;
     @media (max-width: 767px) {
-      height: 35dvh;
+      height: 45dvh;
+      height: 45vh;
       h1 {
         font-size: 40px;
       }
@@ -668,7 +674,7 @@ header {
       top: 0;
       height: 100%;
       width: auto;
-      z-index: 3;
+      z-index: 2;
     }
   }
 
@@ -788,10 +794,13 @@ header {
     -webkit-tap-highlight-color: transparent;
   }
   .slick-slide {
-    // margin: 0px 20px;
+    margin: auto;
+    text-align: center;
     img {
       max-height: 80px;
       width: auto;
+      max-width: 180px;
+      margin: 0 auto;
     }
   }
   .slick-dots {
@@ -814,6 +823,10 @@ header {
 
 .slick-highlight {
   .slick-slide {
+    scale: 0.91;
+    @media (max-width: 767px) {
+      scale: 1;
+    }
     img {
       width: 100%;
       min-height: 450px;
@@ -821,8 +834,6 @@ header {
         min-height: auto;
       }
     }
-
-    scale: 0.91;
     &.slick-current.slick-active.slick-center {
       scale: 1;
     }
