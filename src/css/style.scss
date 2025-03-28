@@ -166,6 +166,9 @@ html {
 
 .ps-40 {
   padding-left: 40px;
+  @media (max-width: 1280px) {
+    padding-left: 8px;
+  }
   @media (max-width: 992px) {
     padding-left: 0;
   }
@@ -559,6 +562,9 @@ header {
       text-decoration: none;
       color: var(--white);
       position: relative;
+      @media(max-width:1280px) {
+        font-size: 14px;
+      }
       &:hover {
         color: var(--secondary);
         transition: all ease-in-out 0.3s;
@@ -595,9 +601,9 @@ header {
     width: 100%;
     @media (max-width: 767px) {
       height: 45dvh;
-    }
-    @media (orientation: landscape) {
-      height: 100%;
+      @media (orientation: landscape) {
+        height: 100%;
+      }
     }
   }
   &:after {
@@ -634,15 +640,15 @@ header {
       h5 {
         font-size: 20px !important;
       }
-    }
-    @media (orientation: landscape) {
-      height: 100vh;
-      h1 {
-        font-size: 40px;
-        margin-top: 60px;
-      }
-      h5 {
-        font-size: 20px !important;
+      @media (orientation: landscape) {
+        height: 100vh;
+        h1 {
+          font-size: 40px;
+          margin-top: 60px;
+        }
+        h5 {
+          font-size: 20px !important;
+        }
       }
     }
   }
